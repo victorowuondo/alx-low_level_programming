@@ -1,28 +1,19 @@
 #include "main.h"
 
 /**
- * rev_string - reverse string
- * @s: param
+ * puts2 - skips 2
+ * @str: string
  */
-
-void rev_string(char *s)
+void puts2(char *str)
 {
-	int i, size, half;
-	char first, last;
+	int i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
+		if (i % 2 == 0)
+			_putchar(str[i]);
 		i++;
 	}
-	size = i - 1;
-	half = size / 2;
-	while (half >= 0)
-	{
-		first = s[size - half];
-		last = s[half];
-		s[half] = first;
-		s[size - half] = last;
-		half--;
-	}
+	_putchar('\n');
 }
