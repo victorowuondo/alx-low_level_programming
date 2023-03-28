@@ -1,19 +1,21 @@
 #include "main.h"
-
 /**
- * print_most_numbers - prints number
+ * print_rev - reverse something
+ * @s: params
  */
 
-void print_most_numbers(void)
+void print_rev(char *s)
 {
-	int i;
+	int i = 0;
+	int j;
 
-	for (i = 48; i < 58; i++)
+	while (s[i] != '\0')
 	{
-		if (i != 50 && i != 52)
-		{
-			_putchar(i);
-		}
+		i++;
+	}
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putchar(s[j]);
 	}
 	_putchar('\n');
 }
